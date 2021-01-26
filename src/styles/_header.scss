@@ -82,5 +82,11 @@
   }
 }
 
-
+body.mobile-open .login {
+  cursor: auto;
+  
+  span {
+    color: $grey !important;
+  }
+}
 

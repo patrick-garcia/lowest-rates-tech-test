@@ -25,10 +25,13 @@ const addClickToLogin = () => {
         setTimeout(() => {
           addToMobileMenu();
         }, 600)
+        
+        document.body.classList.add('mobile-open');
       
-      } else {
-        menuElem.classList.remove('open');
       }
+      //  else {
+      //   e.preventDefault();
+      // }
 
       scrollTo(document.querySelector('#site-footer'));
     });

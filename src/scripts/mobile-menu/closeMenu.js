@@ -15,6 +15,10 @@ const closeMenu = (mobileMenuElem) => {
       mobileMenuElem.classList.remove('open');
       scrollTo(document.querySelector('#site-header'));
     }, 300);
+
+    if(document.body.classList.contains('mobile-open')) {
+      document.body.classList.remove('mobile-open');
+    }
   });
 };
 
