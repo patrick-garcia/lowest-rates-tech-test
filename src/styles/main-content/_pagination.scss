@@ -1,0 +1,54 @@
+#main-content .pagination {
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid $border-color;
+
+  .pagination-container {
+    width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      color: $black-2;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+
+    ul {
+      width: 190px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 1rem;
+
+      li {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          @include font-fam();
+          @include font-config(20px, $black-2);
+        }
+
+        &.selected, &:hover {
+          background: $black-2;
+
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

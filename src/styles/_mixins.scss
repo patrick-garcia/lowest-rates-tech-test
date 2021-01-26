@@ -1,0 +1,11 @@
+@mixin font-fam($font: $font-1, $weight: 300) {
+  font-family: $font;
+  font-weight: $weight;
+}
+
+@mixin font-config($size, $color, $lHeight: 1.2) {
+  font-size: $size;
+  color: $color;
+  line-height: $lHeight;
+}
+

@@ -1,0 +1,60 @@
+#main-content {
+  .about-section, .what-section {
+    padding: 2rem;
+
+    header {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+
+      h2 {
+        @include font-fam();
+        @include font-config(2.4rem, $black);
+        text-align: center;
+      }
+    }
+  }
+
+  .about-section {
+    margin-bottom: 4rem;
+
+    header {
+      margin-bottom: 2.5rem;
+    }
+
+    figure {
+      width: 100%;
+      display: block;
+      max-width: 640px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .what-section {
+    margin-bottom: 2rem;
+
+    header {
+      margin-bottom: 2rem;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-style: italic;
+        
+      }
+    }
+
+    p {
+      @include font-fam();
+      @include font-config(1.8rem, $grey);
+      text-align: center;
+    }
+  }
+}

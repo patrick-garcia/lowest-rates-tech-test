@@ -1,0 +1,45 @@
+.mobile-menu {
+  z-index: 11;
+  background: $white;
+  width: 100vw;
+  max-width: 500px;
+  min-height: 100vh;
+  border-right: 1px solid $light-grey;
+  box-shadow: 1px 0px 1px 0px rgba(50, 50, 50, 0.1);
+  position: fixed;
+  top: 0;
+  left: -110%;
+  transition: left 0.3s ease-in-out;
+
+  &-close a, ul > li > a {
+    @include font-fam();
+    @include font-config(2.4rem, $black-2, 2.1rem);
+    display: block;
+    padding: 1.8rem 2.4rem;
+    text-transform: capitalize;
+  }
+
+  .mobile-menu-close {
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  &-primary {
+    li {
+      display: block;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &.open {
+    left: 0;
+  }
+}

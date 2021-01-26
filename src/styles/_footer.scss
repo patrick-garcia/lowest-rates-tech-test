@@ -1,0 +1,148 @@
+#site-footer {
+  padding: 4rem 3.2rem;
+  margin-bottom: 4rem;
+
+  .footer-wrap {
+    padding-top: 6rem;
+    border-top: 0.2rem solid $border-color;
+
+    .footer-block {
+      margin-bottom: 4rem;
+
+      .block-title {
+        @include font-fam();
+        @include font-config(2.4rem, $black);
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .footer-main {
+      &-description {
+        p {
+          @include font-fam();
+          @include font-config(1.8rem, $black);
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .related-items {
+      .related-articles {
+        h2 {
+          margin-bottom: 1.5rem;
+        }
+
+        article {
+          padding: 2rem;
+
+          &:not(:first-child) {
+            border-top: 0.2rem solid $border-color;
+          }
+        }
+
+        .tile-article {
+          header {
+            display: flex;
+
+            figure {
+              max-width: 13rem;
+              max-height: 7rem;
+              overflow: hidden;
+              margin-right: 2rem;
+              
+              img {
+                width: 100%;
+                height: auto;  
+              }
+            }
+
+            h3 {
+              @include font-fam();
+              @include font-config(2rem, $black-2);
+              margin-top: 1rem;
+              max-width: 40rem;
+            }
+          }
+          
+          .article-description {
+            padding-top: 0.8rem;
+
+            p {
+              @include font-fam();
+              @include font-config(1.8rem, $black-2);
+            }
+          }
+        }
+      }
+    }
+
+    .insurance-types {
+      .types-container {
+        .insurance-type-tag {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0.6rem 1.4rem 0;
+          
+          a {
+            @include font-fam();
+            @include font-config(1.5rem, $white);
+            background: $grey;
+            height: 28px;
+            display: block;
+            padding: 0.6rem 1.2rem;
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:hover {
+            a {
+              background: $black-2;
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer grid
+@media (min-width: 840px) {
+  #site-footer {
+    .footer-wrap  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .footer-block {
+        width: 100%;
+
+        &:first-child, &:nth-child(2) {
+          max-width: 48%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  #site-footer {
+    .footer-wrap  {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-block {
+        max-width: 31%;
+
+        &:first-child, &:nth-child(2) {
+          max-width: 31%;
+        }
+
+        &.related-items {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}
